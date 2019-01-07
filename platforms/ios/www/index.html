@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Easybooker</title>
+        
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        
+        <script type="text/javascript" charset="utf-8">
+            
+            // Wait for device API libraries to load
+            //
+            document.addEventListener("deviceready", onDeviceReady, false);
+            
+            // device APIs are available
+            //
+            function onDeviceReady() {
+                var ref = window.open('http://apps.happp.be/versus/', '_blank', 'location=no,toolbar=no');
+                // ref.addEventListener( "loadstart", function(event) {
+                //     if(event.url == 'https://app.versu.be/open/scanner'){
+                //         window.open('http://apache.org', '_blank', 'location=no,toolbar=yes,closebuttoncaption=Sluiten');
+                //     }
+                //  });
+                ref.addEventListener('loadstop', function(event) {});
+                ref.addEventListener('loaderror', function(event) {});
+                ref.addEventListener('exit', function(event) {});
+                var notificationOpenedCallback = function(jsonData) {
+                    console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
+                };
+                
+                window.plugins.OneSignal
+                .startInit("da073ef4-99c1-453d-a8e9-5146b3b7a8f2")
+                .handleNotificationOpened(notificationOpenedCallback)
+                .endInit();
+                
+            }        
+        
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

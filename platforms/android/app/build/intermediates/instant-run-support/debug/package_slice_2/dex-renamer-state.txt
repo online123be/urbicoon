@@ -1,0 +1,4 @@
+#Thu Jun 28 21:17:16 CEST 2018
+base.0=/Volumes/HDD/app can go here/versus/platforms/android/app/build/intermediates/transforms/dexMerger/debug/3
+renamed.0=classes.dex
+file.0=/Volumes/HDD/app can go here/versus/platforms/android/app/build/intermediates/transforms/dexMerger/debug/3/classes.dex
