@@ -14,7 +14,7 @@
             // device APIs are available
             //
             function onDeviceReady() {
-                var ref = window.open('http://apps.easybooker.be/versus', '_blank', 'location=no,toolbar=no');
+                var ref = window.open('http://192.168.254.138/index.php?page=1', '_blank', 'location=no,zoom=no,toolbar=no');
                 // ref.addEventListener( "loadstart", function(event) {
                 //     if(event.url == 'https://app.versu.be/open/scanner'){
                 //         window.open('http://apache.org', '_blank', 'location=no,toolbar=yes,closebuttoncaption=Sluiten');
@@ -26,9 +26,10 @@
                 var notificationOpenedCallback = function(jsonData) {
                     console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
                 };
-            }
+                
+            }        
         
-            </script>
+        </script>
     </head>
     <body>
     </body>

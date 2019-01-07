@@ -47,18 +47,3 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
-document.addEventListener('deviceready', function () {
-
- var notificationOpenedCallback = function(jsonData) {
-    console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
-  };
-
-  window.plugins.OneSignal
-    .startInit("da073ef4-99c1-453d-a8e9-5146b3b7a8f2")
-    .handleNotificationOpened(notificationOpenedCallback)
-    .endInit();
-
-  // Call syncHashedEmail anywhere in your app if you have the user's email.
-  // This improves the effectiveness of OneSignal's "best-time" notification scheduling feature.
-  // window.plugins.OneSignal.syncHashedEmail(userEmail);
-}, false);
